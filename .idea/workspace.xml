@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daf7ccec-5634-40f7-8653-dc60867118c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/cmd_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/cmd_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert_test.go" afterDir="false" />
@@ -18,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/regex_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/regex_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/slice_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/slice_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/string_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/string_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/bin.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/bin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/build.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/build.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/clean.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/clean.go" afterDir="false" />
@@ -152,7 +154,7 @@
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/github.com/gpmgo/gopm" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -227,6 +229,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -306,10 +309,10 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="889" y="0" width="1027" height="1000" extended-state="0" />
+    <frame x="735" y="0" width="1181" height="1000" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50461894" visible="true" weight="0.2895553" />
-      <window_info id="Structure" order="1" sideWeight="0.49538106" side_tool="true" visible="true" weight="0.2895553" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50461894" visible="true" weight="0.24977699" />
+      <window_info id="Structure" order="1" sideWeight="0.49538106" side_tool="true" visible="true" weight="0.24977699" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
