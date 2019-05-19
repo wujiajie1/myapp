@@ -4,49 +4,50 @@ import (
 	"errors"
 	"fmt"
 	"github.com/astaxie/beego/config"
+	"logagent/module"
 )
 var (
-	appConfig *Config
+	appConfig *module.Config
 )
-//config 存取加载的配置
-type Config struct {
-	LogLevel 	string `json:"log_level"`
-	LogPath 	string `json:"log_path"`
-	Collect 	[]CollectConf `json:"collect"`
-}
-//CollectConf 日志收集配置
-type CollectConf struct {
-	LogPath 	string `json:"log_path"`
-	Topic 		string `json:"topic"`
-}
-func LoadConf(confType, fileName string) error {
+
+func LoadConf(confType, fileName string) (*module.Config,error) {
 	conf, err := config.NewConfig(confType, fileName)
 	if err != nil {
 		fmt.Println("new config failed,err:",err)
-		return err
+		return nil,err
 	}
 	//生成config的实例
-	appConfig = &Config{}
+	appConfig = &module.Config{}
 	appConfig.LogLevel = conf.String("logs::log_level")
-	//容错处理
 	if len(appConfig.LogLevel) == 0 {
 		appConfig.LogLevel = "debug"
 	}
+
 	appConfig.LogPath = conf.String("logs::log_path")
-	//容错处理
 	if len(appConfig.LogPath) == 0 {
 		appConfig.LogPath = "./logs/logagent.log"
+	}
+
+	appConfig.KafkaAddr = conf.String("logs::kafka_addr")
+	if len(appConfig.KafkaAddr) == 0 {
+		appConfig.KafkaAddr = "localhost:9092"
+	}
+
+	appConfig.ChanSize, err = conf.Int("logs::chan_size")
+	if err != nil {
+		fmt.Println("load chan_size conf failed,err:",err)
+		appConfig.ChanSize = 100
 	}
 	err = LoadCollectConf(conf)
 	if err != nil {
 		fmt.Println("load collect conf failed,err:",err)
-		return err
+		return nil,err
 	}
-	return nil
+	return appConfig,nil
 }
 
 func LoadCollectConf(configer config.Configer) error {
-	var cc CollectConf
+	var cc module.CollectConf
 	var err error
 	cc.LogPath = configer.String("collect::log_path")
 	if len(cc.LogPath) == 0 {
@@ -59,6 +60,7 @@ func LoadCollectConf(configer config.Configer) error {
 		err = errors.New("invalid collect::topic")
 		return err
 	}
+
 	appConfig.Collect = append(appConfig.Collect,cc)
 	return err
 }
