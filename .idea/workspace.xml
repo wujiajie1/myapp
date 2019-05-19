@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="daf7ccec-5634-40f7-8653-dc60867118c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/cmd_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/cmd_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/convert_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/dir.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/dir.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/dir_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/dir_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/example_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/example_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/file_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/file_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/html_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/html_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/http_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/http_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/math_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/math_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/path.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/path.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/path_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/path_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/regex_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/regex_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/slice_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/slice_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/Unknwon/com/string_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/Unknwon/com/string_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/bin.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/bin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/build.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/build.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/clean.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/clean.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/exec.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/exec.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/helper_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/helper_windows.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/install.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/install.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/run.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/run.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/cmd/update.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/gopm.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/gopm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/lib/lib.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/lib/lib.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/read.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/read.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/write.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/write.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/zip.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cae/zip/zip.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/command.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/command.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/context.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/help.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/cli/help.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/struct.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/doc/utils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/errors/errors.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/errors/errors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/goconfig/read.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/goconfig/read.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/goconfig/write.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/goconfig/write.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/gpmgo/gopm/modules/setting/setting.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="vertical" split-proportion="0.5889146">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/logs/log.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="181">
+                  <caret line="582" column="5" selection-start-line="582" selection-start-column="5" selection-end-line="582" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/logagent/main/main.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="462">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/config/fake.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1561">
+                  <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#629#681#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/vendor/vendor.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-66" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/logagent/main/log.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="191">
+                  <caret line="25" column="15" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="15" />
+                  <folding>
+                    <element signature="e#14#81#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/logagent/main/config.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="349">
+                  <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#14#66#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/conf/logagent.conf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="167">
+                  <caret line="10" column="17" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>github.com/DataDog/zstd</find>
+      <find>vendor</find>
+    </findStrings>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/github.com/gpmgo/gopm" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/github.com/shopify/sarama/zstd_cgo.go" />
+        <option value="$PROJECT_DIR$/src/kafka_test/producer.go" />
+        <option value="$PROJECT_DIR$/src/github.com/hpcloud/tail/tail.go" />
+        <option value="$PROJECT_DIR$/src/kafka_test/tailflog/tailfLog.go" />
+        <option value="$PROJECT_DIR$/src/a.go" />
+        <option value="$PROJECT_DIR$/src/kafka_test/config/config.go" />
+        <option value="$PROJECT_DIR$/src/kafka_test/config/test.ini" />
+        <option value="$PROJECT_DIR$/src/logagent/conf/logagent.conf" />
+        <option value="$PROJECT_DIR$/src/logagent/conf/test.go" />
+        <option value="$PROJECT_DIR$/src/kafka_test/log/log.go" />
+        <option value="$PROJECT_DIR$/conf/logagent.conf" />
+        <option value="$PROJECT_DIR$/src/logagent/main/config.go" />
+        <option value="$PROJECT_DIR$/src/logagent/main/main.go" />
+        <option value="$PROJECT_DIR$/src/logagent/main/log.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="735" />
+    <option name="width" value="1181" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="astaxie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="astaxie" type="462c0819:PsiDirectoryNode" />
+              <item name="beego" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\golang\myapp\src" />
+      <recent name="D:\workspace\golang\myapp\src\vendor" />
+      <recent name="D:\workspace\golang\myapp\conf" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build test.go">
+    <configuration name="go build a.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myapp" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/a.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build config.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myapp" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/kafka_test/config/config.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build producer.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myapp" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/kafka_test/producer.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build tailfLog.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myapp" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/kafka_test/tailflog/tailfLog.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myapp" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/logagent/conf/test.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build test.go" />
+        <item itemvalue="Go Build.go build config.go" />
+        <item itemvalue="Go Build.go build a.go" />
+        <item itemvalue="Go Build.go build tailfLog.go" />
+        <item itemvalue="Go Build.go build producer.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="889" y="0" width="1027" height="1000" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50461894" visible="true" weight="0.2895553" />
+      <window_info id="Structure" order="1" sideWeight="0.49538106" side_tool="true" visible="true" weight="0.2895553" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30831409" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" x="205" y="437" width="1659" height="279" id="Terminal" order="10" type="WINDOWED" visible="true" weight="0.30260304" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ini" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/go_dev/day13/log_transfer/kafka.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/DataDog/zstd/zstd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="117" column="5" lean-forward="true" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/shopify/sarama/sync_producer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/shopify/sarama/zstd_cgo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/shopify/sarama/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/shopify/sarama/async_producer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="172" column="4" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/shopify/sarama/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="393" selection-start-line="392" selection-end-line="393" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/hpcloud/tail/tail.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kafka_test/tailflog/tailfLog.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#14#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kafka_test/producer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/os/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kafka_test/config/test.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kafka_test/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/gpmgo/gopm/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/a.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/syscall/syscall_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="394" column="21" selection-start-line="394" selection-start-column="21" selection-end-line="394" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/syscall/zsyscall_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="426" column="5" selection-start-line="426" selection-start-column="5" selection-end-line="426" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/os/getwd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logagent/conf/test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kafka_test/log/log.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/logagent.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logagent/main/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+          <folding>
+            <element signature="e#14#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/logs/log.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="582" column="5" selection-start-line="582" selection-start-column="5" selection-end-line="582" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logagent/main/log.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <element signature="e#14#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logagent/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/config/fake.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1561">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#629#681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/astaxie/beego/vendor/vendor.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66" />
+      </provider>
+    </entry>
+  </component>
+</project>

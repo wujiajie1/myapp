@@ -1,0 +1,20 @@
+// Copyright 2014 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+// +build !aix,!darwin,!freebsd,!linux,!solaris
+
+package ipv6
+
+import (
+	"net"
+	"vendor"
+)
+
+func (so *vendor.sockOpt) setGroupReq(c *vendor.Conn, ifi *net.Interface, grp net.IP) error {
+	return vendor.errNotImplemented
+}
+
+func (so *vendor.sockOpt) setGroupSourceReq(c *vendor.Conn, ifi *net.Interface, grp, src net.IP) error {
+	return vendor.errNotImplemented
+}

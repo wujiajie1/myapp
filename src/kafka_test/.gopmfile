@@ -1,0 +1,5 @@
+[deps]
+github.com/shopify/sarama = 
+google.golang.org/grpc = 
+github.com/grpc/grpc-go = 
+
