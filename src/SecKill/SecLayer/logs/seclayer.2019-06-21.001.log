@@ -1,0 +1,2 @@
+2019/06/20 23:36:33.211 [D] [asm_amd64.s:1333]  pop from queue, data:{"ProductId":2,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":1,"UserAuthSign":"","AccessTime":"2019-06-20T23:36:32.7666105+08:00","ClientAddr":"[","ClientRefence":""}
+2019/06/20 23:36:33.308 [D] [asm_amd64.s:1333]  begin process request:&{2     1  2019-06-20 23:36:32.7666105 +0800 CST [ }

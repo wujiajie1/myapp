@@ -2,12 +2,13 @@ package router
 
 import (
 	"SecKill/SecProxy/controller"
+
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 )
 
 func init() {
-	//初始化路由
-	beego.Router("/seckill",&controller.SkillController{},"*:SecKill")
-	//查看活动的状态
-	beego.Router("/secinfo",&controller.SkillController{},"*:SecInfo")
+	logs.Debug("enter router init")
+	beego.Router("/seckill", &controller.SkillController{}, "*:SecKill")
+	beego.Router("/secinfo", &controller.SkillController{}, "*:SecInfo")
 }

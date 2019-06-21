@@ -1,26 +1,25 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/coreos/etcd/clientv3"
 	"time"
-	"golang.org/x/net/context"
+
+	"github.com/coreos/etcd/clientv3"
 )
 
 const (
 	EtcdKey = "/oldboy/backend/secskill/product"
 )
+
 type SecInfoConf struct {
 	ProductId int
 	StartTime int
-	EndTime int
-	Status  int
-	Count   int
-	Left    int   //商品剩余量
-}
-func main() {
-	SetLogConfToEtcd()
+	EndTime   int
+	Status    int
+	Total     int
+	Left      int
 }
 
 func SetLogConfToEtcd() {
@@ -35,32 +34,32 @@ func SetLogConfToEtcd() {
 
 	fmt.Println("connect succ")
 	defer cli.Close()
-	var secInfoArr []SecInfoConf
-	secInfoArr = append(secInfoArr,SecInfoConf{
-		1028,
-		1559313298,
-		15593832933,
-		0,
-		1000,
-		1000,
-	})
-	secInfoArr = append(secInfoArr,SecInfoConf{
-		1027,
-		1559313298,
-		15593832933,
-		0,
-		2000,
-		2000,
-	})
-	secInfoArr = append(secInfoArr,SecInfoConf{
-		1026,
-		1559313298,
-		15593832933,
-		0,
-		2000,
-		2000,
-	})
-	data, err := json.Marshal(secInfoArr)
+
+	var SecInfoConfArr []SecInfoConf
+	SecInfoConfArr = append(
+		SecInfoConfArr,
+		SecInfoConf{
+			ProductId: 1029,
+			StartTime: 1505008800,
+			EndTime:   1505012400,
+			Status:    0,
+			Total:     1000,
+			Left:      1000,
+		},
+	)
+	SecInfoConfArr = append(
+		SecInfoConfArr,
+		SecInfoConf{
+			ProductId: 1027,
+			StartTime: 1505008800,
+			EndTime:   1505012400,
+			Status:    0,
+			Total:     2000,
+			Left:      1000,
+		},
+	)
+
+	data, err := json.Marshal(SecInfoConfArr)
 	if err != nil {
 		fmt.Println("json failed, ", err)
 		return
@@ -70,14 +69,15 @@ func SetLogConfToEtcd() {
 	//cli.Delete(ctx, EtcdKey)
 	//return
 	_, err = cli.Put(ctx, EtcdKey, string(data))
-	defer cancel()
+	cancel()
 	if err != nil {
 		fmt.Println("put failed, err:", err)
 		return
 	}
+
 	ctx, cancel = context.WithTimeout(context.Background(), time.Second)
 	resp, err := cli.Get(ctx, EtcdKey)
-	defer cancel()
+	cancel()
 	if err != nil {
 		fmt.Println("get failed, err:", err)
 		return
@@ -85,4 +85,8 @@ func SetLogConfToEtcd() {
 	for _, ev := range resp.Kvs {
 		fmt.Printf("%s : %s\n", ev.Key, ev.Value)
 	}
+}
+
+func main() {
+	SetLogConfToEtcd()
 }

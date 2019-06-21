@@ -1,25 +1,28 @@
 package service
 
 import (
-	"crypto/md5"
 	"fmt"
-	"github.com/astaxie/beego/logs"
 	"time"
+
+	"crypto/md5"
+
+	"github.com/astaxie/beego/logs"
 )
 
-var (
-	secSkillConf *SecSkillConf
-)
-func  InitService(serviceCon *SecSkillConf)  {
-	secSkillConf = serviceCon
-	logs.Debug("init service succ,config:%v",secSkillConf)
+func NewSecRequest() (secRequest *SecRequest) {
+	secRequest = &SecRequest{
+		ResultChan: make(chan *SecResult, 1),
+	}
+
+	return
 }
+
 func SecInfoList() (data []map[string]interface{}, code int, err error) {
 
-	secSkillConf.RwSecProductLock.RLock()
-	defer secSkillConf.RwSecProductLock.RUnlock()
+	secKillConf.RWSecProductLock.RLock()
+	defer secKillConf.RWSecProductLock.RUnlock()
 
-	for _, v := range secSkillConf.SecProductInfoMap {
+	for _, v := range secKillConf.SecProductInfoMap {
 
 		item, _, err := SecInfoById(v.ProductId)
 		if err != nil {
@@ -27,18 +30,33 @@ func SecInfoList() (data []map[string]interface{}, code int, err error) {
 			continue
 		}
 
-		logs.Debug("get product[%d]， result[%v], all[%v] v[%v]", v.ProductId, item, secSkillConf.SecProductInfoMap, v)
+		logs.Debug("get product[%d]， result[%v], all[%v] v[%v]", v.ProductId, item, secKillConf.SecProductInfoMap, v)
 		data = append(data, item)
 	}
 
 	return
 }
+
+func SecInfo(productId int) (data []map[string]interface{}, code int, err error) {
+
+	secKillConf.RWSecProductLock.RLock()
+	defer secKillConf.RWSecProductLock.RUnlock()
+
+	item, code, err := SecInfoById(productId)
+	if err != nil {
+		return
+	}
+
+	data = append(data, item)
+	return
+}
+
 func SecInfoById(productId int) (data map[string]interface{}, code int, err error) {
 
-	secSkillConf.RwSecProductLock.RLock()
-	defer secSkillConf.RwSecProductLock.RUnlock()
+	secKillConf.RWSecProductLock.RLock()
+	defer secKillConf.RWSecProductLock.RUnlock()
 
-	v, ok := secSkillConf.SecProductInfoMap[productId]
+	v, ok := secKillConf.SecProductInfoMap[productId]
 	if !ok {
 		code = ErrNotFoundProductId
 		err = fmt.Errorf("not found product_id:%d", productId)
@@ -83,95 +101,95 @@ func SecInfoById(productId int) (data map[string]interface{}, code int, err erro
 
 	return
 }
-func SecInfo(productId int) (data []map[string]interface{},code int,err error) {
-	secSkillConf.RwSecProductLock.RLock()
-	defer secSkillConf.RwSecProductLock.RUnlock()
 
-	item, code, err := SecInfoById(productId)
-	if err != nil {
+func userCheck(req *SecRequest) (err error) {
+
+	found := false
+	for _, refer := range secKillConf.ReferWhiteList {
+		if refer == req.ClientRefence {
+			found = true
+			break
+		}
+	}
+
+	if !found {
+		err = fmt.Errorf("invalid request")
+		logs.Warn("user[%d] is reject by refer, req[%v]", req.UserId, req)
 		return
 	}
 
-	data = append(data, item)
+	authData := fmt.Sprintf("%d:%s", req.UserId, secKillConf.CookieSecretKey)
+	authSign := fmt.Sprintf("%x", md5.Sum([]byte(authData)))
+
+	if authSign != req.UserAuthSign {
+		err = fmt.Errorf("invalid user cookie auth")
+		return
+	}
 	return
 }
 
 func SecKill(req *SecRequest) (data map[string]interface{}, code int, err error) {
 
-	secSkillConf.RwSecProductLock.RLock()
-	defer secSkillConf.RwSecProductLock.RUnlock()
-	//用户检测
+	secKillConf.RWSecProductLock.RLock()
+	defer secKillConf.RWSecProductLock.RUnlock()
+/*
 	err = userCheck(req)
 	if err != nil {
 		code = ErrUserCheckAuthFailed
 		logs.Warn("userId[%d] invalid, check failed, req[%v]", req.UserId, req)
 		return
 	}
-	//请求频率检查
+*/
 	err = antiSpam(req)
 	if err != nil {
 		code = ErrUserServiceBusy
 		logs.Warn("userId[%d] invalid, check failed, req[%v]", req.UserId, req)
 		return
 	}
-	
-	//data, code, err = SecInfoById(req.ProductId)
-	//if err != nil {
-	//	logs.Warn("userId[%d] secInfoBy Id failed, req[%v]", req.UserId, req)
-	//	return
-	//}
-	//
-	//if code != 0 {
-	//	logs.Warn("userId[%d] secInfoByid failed, code[%d] req[%v]", req.UserId, code, req)
-	//	return
-	//}
-	//
-	//userKey := fmt.Sprintf("%s_%s", req.UserId, req.ProductId)
-	//secKillConf.UserConnMap[userKey] = req.ResultChan
-	//
-	//secKillConf.SecReqChan <- req
-	//
-	//ticker := time.NewTicker(time.Second * 10)
-	//
-	//defer func() {
-	//	ticker.Stop()
-	//	secKillConf.UserConnMapLock.Lock()
-	//	delete(secKillConf.UserConnMap, userKey)
-	//	secKillConf.UserConnMapLock.Unlock()
-	//}()
-	//
-	//select {
-	//case <-ticker.C:
-	//	code = ErrProcessTimeout
-	//	err = fmt.Errorf("request timeout")
-	//
-	//	return
-	//case <-req.CloseNotify:
-	//	code = ErrClientClosed
-	//	err = fmt.Errorf("client already closed")
-	//	return
-	//case result := <-req.ResultChan:
-	//	code = result.Code
-	//	data["product_id"] = result.ProductId
-	//	data["token"] = result.Token
-	//	data["user_id"] = result.UserId
-	//
-	//	return
-	//}
-	//
-	
-	return
-}
 
-
-
-func userCheck(request *SecRequest) error {
-	authData := fmt.Sprintf("%d:%s",request.UserId,secSkillConf.CookieSecretKey)
-	authSign := fmt.Sprintf("%x",md5.Sum([]byte(authData)))
-
-	if authSign != request.UserAuthSign {
-		err := fmt.Errorf("invalid user cookie auth")
-		return err
+	data, code, err = SecInfoById(req.ProductId)
+	if err != nil {
+		logs.Warn("userId[%d] secInfoBy Id failed, req[%v]", req.UserId, req)
+		return
 	}
-	return nil
+
+	if code != 0 {
+		logs.Warn("userId[%d] secInfoByid failed, code[%d] req[%v]", req.UserId, code, req)
+		return
+	}
+
+	userKey := fmt.Sprintf("%s_%s", req.UserId, req.ProductId)
+	secKillConf.UserConnMap[userKey] = req.ResultChan
+
+	secKillConf.SecReqChan <- req
+
+	ticker := time.NewTicker(time.Second * 10)
+
+	defer func() {
+		ticker.Stop()
+		secKillConf.UserConnMapLock.Lock()
+		delete(secKillConf.UserConnMap, userKey)
+		secKillConf.UserConnMapLock.Unlock()
+	}()
+
+	select {
+	case <-ticker.C:
+		code = ErrProcessTimeout
+		err = fmt.Errorf("request timeout")
+
+		return
+	case <-req.CloseNotify:
+		code = ErrClientClosed
+		err = fmt.Errorf("client already closed")
+		return
+	case result := <-req.ResultChan:
+		code = result.Code
+		data["product_id"] = result.ProductId
+		data["token"] = result.Token
+		data["user_id"] = result.UserId
+
+		return
+	}
+
+	return
 }

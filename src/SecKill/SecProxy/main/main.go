@@ -1,23 +1,24 @@
 package main
 
 import (
-	"github.com/astaxie/beego"
 	_ "SecKill/SecProxy/router"
+
+	"github.com/astaxie/beego"
 )
 
 func main() {
-	//加载配置 local ip:192.168.31.95
-	err := InitConfig()
+
+	err := initConfig()
 	if err != nil {
 		panic(err)
 		return
 	}
-	err = InitSec()
+
+	err = initSec()
 	if err != nil {
 		panic(err)
 		return
 	}
+
 	beego.Run()
 }
-
-

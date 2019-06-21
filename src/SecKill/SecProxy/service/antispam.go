@@ -3,53 +3,78 @@ package service
 import (
 	"fmt"
 	"sync"
+
+	"github.com/astaxie/beego/logs"
 )
 
-var (
-	secLimitMgr = &SecLimitMgr{
-		UserLimitMap:make(map[int]*SecLimit,10000),
-	}
-)
 type SecLimitMgr struct {
-	UserLimitMap map[int]*SecLimit
-	lock sync.Mutex
+	UserLimitMap map[int]*Limit
+	IpLimitMap   map[string]*Limit
+	lock         sync.Mutex
 }
-type SecLimit struct {
-	count int
-	curTime int64
-}
-//检查是否超过限制，计数
-//计算用户在1s内请求了多少次
-func (p *SecLimit) Count(nowTime int64) int{
-	//与当前请求时间进行比较、
-	if p.curTime != nowTime {
-		p.count = 1
-		p.curTime = nowTime
-		return p.count
+
+func antiSpam(req *SecRequest) (err error) {
+
+	_, ok := secKillConf.idBlackMap[req.UserId]
+	if ok {
+		err = fmt.Errorf("invalid request")
+		logs.Error("useId[%v] is block by id black", req.UserId)
+		return
 	}
-	p.count ++
-	return p.count
-}
-//检查用户在1s内访问次数
-func (p *SecLimit) Check(nowTime int64) int{
-	if p.curTime != nowTime {
-		return 0
+
+	_, ok = secKillConf.ipBlackMap[req.ClientAddr]
+	if ok {
+		err = fmt.Errorf("invalid request")
+		logs.Error("useId[%v] ip[%v] is block by ip black", req.UserId, req.ClientAddr)
+		return
 	}
-	return p.count
-}
-//请求频率检测
-func antiSpam(req *SecRequest) error {
-	secLimitMgr.lock.Lock()
-	defer secLimitMgr.lock.Unlock()
-	secLimit,ok := secLimitMgr.UserLimitMap[req.UserId]
+
+	secKillConf.secLimitMgr.lock.Lock()
+	//uid 频率控制
+	limit, ok := secKillConf.secLimitMgr.UserLimitMap[req.UserId]
 	if !ok {
-		secLimit = &SecLimit{}
-		secLimitMgr.UserLimitMap[req.UserId] = secLimit
+		limit = &Limit{
+			secLimit: &SecLimit{},
+			minLimit: &MinLimit{},
+		}
+		secKillConf.secLimitMgr.UserLimitMap[req.UserId] = limit
 	}
-	count := secLimit.Count(req.AccessTime.Unix())
-	if count > secSkillConf.UserSecAccessLimit {
-		err := fmt.Errorf("invalid request")
-		return err
+
+	secIdCount := limit.secLimit.Count(req.AccessTime.Unix())
+	minIdCount := limit.minLimit.Count(req.AccessTime.Unix())
+
+	//ip 频率控制
+	limit, ok = secKillConf.secLimitMgr.IpLimitMap[req.ClientAddr]
+	if !ok {
+		limit = &Limit{
+			secLimit: &SecLimit{},
+			minLimit: &MinLimit{},
+		}
+		secKillConf.secLimitMgr.IpLimitMap[req.ClientAddr] = limit
 	}
-	return nil
+
+	secIpCount := limit.secLimit.Count(req.AccessTime.Unix())
+	minIpCount := limit.minLimit.Count(req.AccessTime.Unix())
+	secKillConf.secLimitMgr.lock.Unlock()
+
+	if secIpCount > secKillConf.AccessLimitConf.IPSecAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if minIpCount > secKillConf.AccessLimitConf.IPMinAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if secIdCount > secKillConf.AccessLimitConf.UserSecAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+
+	if minIdCount > secKillConf.AccessLimitConf.UserMinAccessLimit {
+		err = fmt.Errorf("invalid request")
+		return
+	}
+	return
 }

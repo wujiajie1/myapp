@@ -1,0 +1,18 @@
+2019/06/21 14:32:46.554 [D] [proc.go:201]  init logger succ
+2019/06/21 14:32:46.558 [D] [main.go:28]  init redis succ
+2019/06/21 14:32:46.587 [D] [init.go:34]  init etcd succ
+2019/06/21 14:32:46.588 [D] [main.go:28]  init etcd succ
+2019/06/21 14:32:46.588 [D] [init.go:41]  start get from etcd succ
+2019/06/21 14:32:46.590 [D] [init.go:41]  get from etcd succ, resp:&{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:8 raft_term:8  [key:"/oldboy/backend/secskill/product" create_revision:4 mod_revision:8 version:5 value:"[{\"ProductId\":1028,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":2000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1026,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":2000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":2,\"StartTime\":1561033100,\"EndTime\":1561128100,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":1,\"BuyRate\":1,\"SoldMaxLimit\":50}]" ] false 1}
+2019/06/21 14:32:46.590 [D] [init.go:41]  key[0] valud[key:"/oldboy/backend/secskill/product" create_revision:4 mod_revision:8 version:5 value:"[{\"ProductId\":1028,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":2000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1026,\"StartTime\":1559313298,\"EndTime\":15593832933,\"Status\":0,\"Total\":0,\"Left\":2000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":2,\"StartTime\":1561033100,\"EndTime\":1561128100,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":1,\"BuyRate\":1,\"SoldMaxLimit\":50}]" ]
+2019/06/21 14:32:46.591 [D] [init.go:41]  sec info conf is [[{1028 1559313298 15593832933 0 0 1000 0 0 0 <nil>} {1027 1559313298 15593832933 0 0 2000 0 0 0 <nil>} {1026 1559313298 15593832933 0 0 2000 0 0 0 <nil>} {2 1561033100 1561128100 0 100 0 1 1 50 <nil>}]]
+2019/06/21 14:32:46.591 [D] [init.go:41]  update product info succ, data:[{1028 1559313298 15593832933 0 0 1000 0 0 0 <nil>} {1027 1559313298 15593832933 0 0 2000 0 0 0 <nil>} {1026 1559313298 15593832933 0 0 2000 0 0 0 <nil>} {2 1561033100 1561128100 0 100 0 1 1 50 <nil>}]
+2019/06/21 14:32:46.591 [D] [init.go:41]  init etcd watcher succ
+2019/06/21 14:32:46.591 [D] [main.go:28]  load product succ
+2019/06/21 14:32:46.594 [D] [asm_amd64.s:1333]  begin watch key:/oldboy/backend/secskill/product
+2019/06/21 14:32:46.598 [D] [main.go:28]  init all succ
+2019/06/21 14:32:46.598 [D] [proc.go:201]  init sec layer succ
+2019/06/21 14:32:46.598 [D] [service.go:6]  all process goroutine started
+2019/06/21 14:32:46.598 [D] [asm_amd64.s:1333]  handle user running
+2019/06/21 14:32:46.598 [D] [asm_amd64.s:1333]  read goroutine running
+2019/06/21 14:32:46.598 [D] [asm_amd64.s:1333]  handle write running
